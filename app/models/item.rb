@@ -8,6 +8,7 @@ class Item < ApplicationRecord
   belongs_to :status
   belongs_to :shipping_cost
   belongs_to :prefecture
+  belongs_to :shipping_day
 
   validates :name, presence: true
   validates :description, presence: true
@@ -15,7 +16,7 @@ class Item < ApplicationRecord
   validates :status_id, presence: true, numericality: { other_than: 1, message: "can't be blank"}
   validates :shipping_cost_id, presence: true, numericality: { other_than: 1, message: "can't be blank"} 
   validates :prefecture_id, presence: true, numericality: { other_than: 1, message: "can't be blank"} 
-  validates :shipping_day_id, presence: true
+  validates :shipping_day_id, presence: true, numericality: { other_than: 1, message: "can't be blank"} 
   validates :price, presence: true
   validates :user, presence: true
 
