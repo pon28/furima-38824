@@ -128,9 +128,9 @@
     </div>
     <ul class='item-lists'>
 
-      <%#  @items.each do |item|  %>
+      <% @items.each do |item|  %>
         <li class='list'>
-          <%= link_to items_path(item) do %>
+          <%#  link_to items_path(item) do %> 
             <div class='item-img-content'>
               <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" if item.image.attached? %>
               <% if @item.present? %>
@@ -151,9 +151,9 @@
                 </div>
               </div>
             </div>
-          <% end %>
+          <%# end %> 
         </li>
-      <%# end %>
+      <% end %>
       <% if @items.blank? %>
         <li class='list'>
           <%= link_to '#' do %>
