@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
   def index
+    @item = Item.find(params[:item_id])
     @order = Order.new
   end
 
@@ -10,7 +11,7 @@ class OrdersController < ApplicationController
       @order.save
       return redirect_to root_path
     else
-      render 'index'
+      render :index
     end
   end
 
@@ -19,6 +20,5 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(:price)
   end
-
 
 end
