@@ -41,7 +41,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :items
-- has_many :purchase_records
+- has_many :orders
 
 ## items テーブル
 
@@ -60,9 +60,9 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-- has_one :purchase_record
+- has_one :order
 
-## purchase_records テーブル
+## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -91,4 +91,5 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :purchase_record
+- belongs_to :order
+
